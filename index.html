@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Hà Thị Lan Anh</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+	rel="stylesheet">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: rgb(128, 0, 128), 128, 192);
+	color: rgb(255, 255, 255) 6e7;
+	overflow-x: hidden;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background: radial-gradient(circle at 20% 20%, rgba(255, 192, 203, .45),
+		transparent 30%),
+		radial-gradient(circle at 80% 20%, rgba(255, 228, 235, .7),
+		transparent 30%),
+		radial-gradient(circle at 50% 80%, rgba(255, 182, 193, .35),
+		transparent 30%);
+	z-index: -1;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 8%;
+	background: rgba(255, 255, 255, .8);
+	border-bottom: 1px solid #ffd6e7;
+	backdrop-filter: blur(10px);
+	z-index: 1000;
+}
+
+nav a {
+	color: #d46a92;
+	text-decoration: none;
+	margin-left: 25px
+}
+
+section {
+	min-height: 100vh;
+	padding: 120px 8% 80px;
+	display: flex;
+	align-items: center;
+}
+
+.hero {
+	justify-content: space-between;
+	gap: 50px
+}
+
+.hero h1 {
+	font-size: 4rem;
+	line-height: 1.1
+}
+
+.hero span {
+	color: #ff8fb1
+}
+
+rgb(0, 0, 64).hero p {
+	margin-top: 20px;
+	font-size: 1.1rem;
+	color: #000
+}
+
+.avatar {
+	width: 380px;
+	height: 380px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 4px solid #ffd6e7;
+	box-shadow: 0 0 25px rgba(255, 182, 193, .8), 0 0 60px
+		rgba(255, 228, 235, .9);
+	transition: 0.4s ease;
+}
+
+.avatar:hover img {
+	transform: scale(1.5);
+}
+
+.avatar img {
+	width: 100%;
+	height: 110%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+}
+
+.card {
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+	transition: 0.3s;
+}
+
+.project:hover {
+	transform: translateY(-8px);
+	border-color: #b8b8b8;
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 40px;
+	color: #b78cff;
+}
+
+.about, .summary {
+	flex-direction: column
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 25px;
+	width: 100%;
+}
+
+.project {
+	transition: .3s;
+}
+
+.project:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 0 30px rgba(169, 112, 255, .3);
+}
+
+.icon {
+	font-size: 40px;
+	margin-bottom: 15px
+}
+
+footer {
+	text-align: center;
+	padding: 30px;
+	color: #aaa
+}
+
+.btn-project {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 10px 20px;
+	background: #a970ff;
+	color: white;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: .3s;
+}
+
+.btn-project:hover {
+	transform: translateY(-3px);
+	background: #8c52ff;
+}
+
+.nav-logo {
+	width: 55px;
+	height: 55px;
+	object-fit: left;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.logo img {
+	width: 55px;
+	height: 55px;
+	object-fit: contain;
+}
+
+.logo h2 {
+	margin: 0;
+	color: #6b2dbd; /* tím giống logo */
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+@media print {
+	nav {
+		display: none;
+	}
+	section {
+		min-height: auto;
+		page-break-inside: avoid;
+		padding: 40px;
+	}
+	body {
+		background: white;
+	}
+}
+</style>
+</head>
+<body>
+
+	<nav>
+		<div class="logo">
+			<img src="images/logo.jpg.svg" alt="UED Logo" class="nav-logo">
+			<h2>UED</h2>
+		</div>
+		<div>
+			<a href="#home">Home</a> <a href="#about">About</a> <a
+				href="#projects">Dự Án </a> <a href="#summary">Tổng kết</a> <a
+				href="#experience">Thách Thức & Giá Trị Tâm Đắc</a>
+		</div>
+	</nav>
+
+	<section class="hero" id="home">
+		<div>
+			<h1>
+				Xin chào,<br>Mình là <span>Hà Thị Lan Anh</span>
+			</h1>
+			<p>
+				Mã sinh viên: 24011087<br> Ngành: Giáo dục Tiểu học<br> Sở
+				thích: Đọc sách, đi bộ, hát, múa<br>
+		</div>
+		<div class="avatar">
+			<img src="images/avatar.jpg">alt=" ảnh đại diện"
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<h2 class="title">Giới Thiệu Bản Thân</h2>
+		<div class="card" style="max-width: 900px">
+			<p>Mình là Hà Thị Lan Anh, sinh viên ngành Giáo dục Tiểu học.
+				Mình luôn mong muốn phát triển bản thân thông qua việc học tập, rèn
+				luyện kỹ năng công nghệ số và áp dụng các phương pháp giáo dục hiện
+				đại. Portfolio này được xây dựng nhằm lưu trữ các sản phẩm học tập,
+				thể hiện quá trình phát triển kỹ năng số và ghi lại hành trình học
+				tập của bản thân.</p>
+			<br>
+			<h3>Mục tiêu của Portfolio cá nhân</h3>
+			<ul>
+				<li>Nâng cao kiến thức chuyên môn ngành Giáo dục Tiểu học.</li>
+				<li>Phát triển kỹ năng công nghệ và ứng dụng trong giảng dạy.</li>
+				<li>Rèn luyện tư duy sáng tạo, kỹ năng giao tiếp và làm việc
+					nhóm.</li>
+				<li>Hệ thống hóa một cách trực quan toàn bộ các sản phẩm thực
+					hành và dự án thành phần từ cơ bản đến nâng cao trong suốt học
+					phần.</li>
+				<li>ánh một cách khách quan sự trưởng thành về tư duy công
+					nghệ, kỹ năng xử lý dữ liệu và khả năng giải quyết vấn đề thực tế.</li>
+				<li>Thiết kế một hồ sơ năng lực (Portfolio) mang đậm dấu ấn
+					riêng, sáng tạo, chuyên nghiệp và tối ưu trải nghiệm người dùng để
+					kết nối với các giảng viên và nhà tuyển dụng tương lai.</li>
+				<li>Thông điệp cá nhân: “Tò mò để khám phá – Trải nghiệm để
+					thấu hiểu – Công nghệ để kiến tạo tương lai.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="about" id="projects">
+		<div style="width: 100%">
+			<h2 class="title">DỰ ÁN</h2>
+			<div class="grid">
+				<div class="card project">
+					<div class="icon">🖥️</div>
+					<h3>Bài 1</h3>
+					<p>Máy tính và các thiết bị ngoại vi</p>
+					<a href="PDF/Bài tập 1. Hà Thị Lan Anh.pdf" target="_blank">Xem
+						PDF</a>
+				</div>
+
+				<div class="card project">
+					<div class="icon">📊</div>
+					<h3>Bài 2</h3>
+					<p>Khai thác dữ liệu và thông tin</p>
+					<a href="PDF/Bài 2.2 Tìm kiếm và đánh giá thông tin học thuật.pdf"
+						target="_blank">Xem PDF</a>
+				</div>
+
+				<div class="card project">
+					<div class="icon">🤖</div>
+					<h3>Bài 3</h3>
+					<p>Tổng quan về trí tuệ nhân tạo</p>
+					<a
+						href="PDF/Bài 3.2 Viết Prompt hiệu quả cho các tác vụ học tập.pdf"
+						target="_blank">Xem PDF</a>
+				</div>
+				<div class="card project">
+					<div class="icon">💬</div>
+					<h3>Bài 4</h3>
+					<p>Giao tiếp và hợp tác trong môi trường số</p>
+					<a href="PDF/Bai4_3.pdf" target="_blank">Xem PDF</a>
+				</div>
+				<div class="card project">
+					<div class="icon">🎨</div>
+					<h3>Bài 5</h3>
+					<p>Sáng tạo nội dung số</p>
+					<a
+						href="PDF/Bài 5.2 Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung (2).pdf"
+						target="_blank">Xem PDF</a>
+				</div>
+				<div class="card project">
+					<div class="icon">🔒</div>
+					<h3>Bài 6</h3>
+					<p>An toàn và liêm chính học thuật trong môi trường số</p>
+					<a
+						href="PDF/Bài 6.4 Sử dụng AI có trách nhiệm trong học tập và nghiên cứu.pdf"
+						target="_blank">Xem PDF</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="summary" id="summary">
+		<h2 class="title">Tổng Kết</h2>
+		<div class="card" style="max-width: 900px">
+			<p>
+				Hành trình xây dựng Portfolio – Từ trải nghiệm đến nhận thức Trong
+				quá trình thực hiện Portfolio, em đã có cơ hội hệ thống lại toàn bộ
+				những kiến thức, kỹ năng và trải nghiệm đã tích lũy được trong học
+				phần. Từ những bài tập cá nhân đến các hoạt động nhóm, mỗi nhiệm vụ
+				đều giúp em hiểu rõ hơn về việc ứng dụng công nghệ số vào học tập và
+				nghề nghiệp tương lai. Quá trình xây dựng Portfolio không chỉ là
+				việc tổng hợp sản phẩm học tập mà còn là cơ hội để em nhìn lại sự
+				tiến bộ của bản thân, nhận ra những điểm mạnh cần phát huy và những
+				hạn chế cần khắc phục. Đây là một trải nghiệm ý nghĩa giúp em phát
+				triển khả năng tự học, tự đánh giá và tư duy phản biện. Giá trị kiến
+				thức và kỹ năng cốt lõi đạt được Thông qua học phần và quá trình xây
+				dựng Portfolio, em đã đạt được nhiều kiến thức và kỹ năng quan trọng
+				như:<br> - Hiểu và vận dụng các công cụ số phục vụ học tập và
+				làm việc.<br> - Biết cách tìm kiếm, đánh giá và sử dụng thông
+				tin trên môi trường số một cách hiệu quả.<br> - Nâng cao kỹ
+				năng làm việc nhóm, giao tiếp và hợp tác trực tuyến.<br> - Bước
+				đầu sử dụng các công cụ trí tuệ nhân tạo (AI) để hỗ trợ học tập và
+				sáng tạo nội dung một cách có trách nhiệm.<br> - Phát triển kỹ
+				năng tự học, quản lý thời gian và tổ chức công việc cá nhân.<br>
+				Những kiến thức và kỹ năng này sẽ là nền tảng quan trọng giúp em học
+				tập hiệu quả hơn cũng như chuẩn bị cho công việc giảng dạy trong
+				tương lai.<br>
+			</p>
+		</div>
+	</section>
+	<section class="summary" id="experience">
+		<h2 class="title">Thách Thức & Giá Trị Tâm Đắc</h2>
+		<div class="card" style="max-width: 900px">
+			<p>Trong quá trình học tập và hoàn thành Portfolio, em gặp một số
+				khó khăn như làm quen với các công cụ công nghệ mới, quản lý thời
+				gian giữa học tập và các hoạt động khác, cũng như tìm hiểu cách ứng
+				dụng AI một cách phù hợp và có đạo đức. Tuy nhiên, chính những khó
+				khăn đó đã giúp em rèn luyện tính kiên trì, khả năng tự học và tinh
+				thần chủ động trong việc giải quyết vấn đề. Điều em tâm đắc nhất là
+				nhận ra vai trò quan trọng của công nghệ trong giáo dục hiện đại và
+				trách nhiệm của người học trong việc sử dụng công nghệ một cách hiệu
+				quả, an toàn và đúng mục đích. Là sinh viên ngành Giáo dục Tiểu học,
+				em tin rằng những kiến thức và kỹ năng đã tích lũy được sẽ hỗ trợ em
+				rất nhiều trong quá trình học tập cũng như công tác giảng dạy sau
+				này, góp phần xây dựng môi trường học tập tích cực và sáng tạo cho
+				học sinh.</p>
+		</div>
+	</section>
+	<section class="summary" id="thanks">
+		<h2 class="title">Lời Cảm Ơn</h2>
+
+		<div class="card" style="max-width: 900px">
+			<p>
+				Em xin gửi lời cảm ơn chân thành đến giảng viên học phần đã tận tình
+				hướng dẫn, truyền đạt kiến thức và tạo điều kiện để em hoàn thành
+				Portfolio này.<br> Em cũng xin cảm ơn gia đình, bạn bè và các
+				thầy cô đã luôn động viên, hỗ trợ em trong quá trình học tập và rèn
+				luyện.<br> Portfolio này là kết quả của quá trình học hỏi, trải
+				nghiệm và nỗ lực của bản thân em trong suốt học phần. Mặc dù đã cố
+				gắng hoàn thiện, nhưng sản phẩm chắc chắn vẫn còn những hạn chế nhất
+				định. Em rất mong nhận được những ý kiến đóng góp quý báu từ thầy cô
+				để em tiếp tục hoàn thiện bản thân trong học tập và nghề nghiệp
+				tương lai. Xin chân thành cảm ơn!
+			</p>
+		</div>
+	</section>
+</body>
+</html>
